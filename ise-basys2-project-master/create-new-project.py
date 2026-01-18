@@ -1,15 +1,34 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Script for creating new project from the Basys2Project project
+"""
+Simplified Basys2 ISE project creator (Python 2.6 compatible).
+
+- Template files are read from the script directory:
+    Basys2Project.xise
+    Basys2Project.vhd
+    Basys2_100_250General.ucf
+
+- New projects are created in the parent directory of the script folder.
+- NO VHD/ folder: the generated .vhd is placed in the project root.
+"""
+
 import os
+import re
 import shutil
 import sys
-import re
 
-basys2 = "Basys2Project"
+TEMPLATE = "Basys2Project"
+UCF_FILE = "Basys2_100_250General.ucf"
 
 def sanitize_name(name):
+    """
+    Make a filesystem- and VHDL-friendly project identifier:
+    - trim
+    - spaces -> underscores
+    - non [A-Za-z0-9_] -> underscore
+    - if starts with digit, prefix underscore
+    """
     name = name.strip()
     name = name.replace(" ", "_")
     name = re.sub(r'[^A-Za-z0-9_]', '_', name)
@@ -20,54 +39,73 @@ def sanitize_name(name):
     return name
 
 def main(argv):
-    
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    here = script_dir
-    projects_dir = os.path.dirname(script_dir)
-
     if len(argv) != 1:
         sys.stderr.write('Usage: create-new-project.py "project name"\n')
         sys.stderr.flush()
         return 1
 
     raw_name = argv[0]
-    desired_name = sanitize_name(raw_name)
-    if not desired_name:
+    project_id = sanitize_name(raw_name)
+    if not project_id:
         sys.stderr.write("Invalid project name.\n")
         return 1
 
-    target = os.path.abspath(os.path.join(projects_dir, desired_name))
+    # Template lives next to this script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # New projects are created one level above (e.g. .../projects)
+    projects_dir = os.path.dirname(script_dir)
+
+    # Template file paths
+    src_ucf  = os.path.join(script_dir, UCF_FILE)
+    src_xise = os.path.join(script_dir, TEMPLATE + ".xise")
+    src_vhd  = os.path.join(script_dir, TEMPLATE + ".vhd")
+
+    for p in [src_ucf, src_xise, src_vhd]:
+        if not os.path.exists(p):
+            sys.stderr.write("Missing template file: " + p + "\n")
+            return 1
+
+    # Target project directory
+    target = os.path.join(projects_dir, project_id)
+
+    if os.path.exists(target):
+        sys.stderr.write(target + " already exists. Exiting.\n")
+        return 1
 
     try:
         os.mkdir(target)
-        os.mkdir(os.path.join(target, 'VHD'))
     except OSError:
-        sys.stderr.write(target + " already exists. Exiting.\n")
+        sys.stderr.write("Failed to create project directory: " + target + "\n")
         return 1
 
     print "Working in " + target
 
-    # Files that need no modification:
-    shutil.copyfile(
-        os.path.join(here, 'Basys2_100_250General.ucf'),
-        os.path.join(target, 'Basys2_100_250General.ucf'))
+    # Copy UCF unchanged
+    shutil.copyfile(src_ucf, os.path.join(target, UCF_FILE))
 
-    # Files that need modification: .xise, .vhd
-    xise = open(os.path.join(here, basys2 + ".xise"), 'r').read()
-    vhd  = open(os.path.join(here, basys2 + ".vhd"), 'r').read()
+    # Load template strings
+    xise = open(src_xise, 'r').read()
+    vhd  = open(src_vhd, 'r').read()
 
-    # IMPORTANT: replace with desired_name (safe identifier), not raw_name
-    xise = xise.replace(basys2, desired_name)
-    vhd  = vhd.replace(basys2, desired_name)
+    # Replace template identifier with safe project identifier
+    xise = xise.replace(TEMPLATE, project_id)
+    vhd  = vhd.replace(TEMPLATE, project_id)
 
-    xiseF = open(os.path.join(target, desired_name + ".xise"), 'w')
-    vhdF  = open(os.path.join(target, "VHD", desired_name + ".vhd"), 'w')
+    # Write new files in project root (no VHD/ folder)
+    out_xise = os.path.join(target, project_id + ".xise")
+    out_vhd  = os.path.join(target, project_id + ".vhd")
 
-    xiseF.write(xise)
-    vhdF.write(vhd)
-
-    xiseF.close()
-    vhdF.close()
+    try:
+        fx = open(out_xise, 'w')
+        fv = open(out_vhd, 'w')
+        fx.write(xise)
+        fv.write(vhd)
+        fx.close()
+        fv.close()
+    except Exception:
+        sys.stderr.write("Failed to write project files.\n")
+        return 1
 
     print "Done."
     return 0

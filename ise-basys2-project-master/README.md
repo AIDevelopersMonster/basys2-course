@@ -6,7 +6,7 @@ Xilinx ISE projects targeting the **Digilent Basys 2 (Spartan-3E) FPGA board**.
 It is intended to be used as a **starting point** for new projects,
 experiments, and educational work with Basys 2.
 
-🇷🇺 Русская версия: [README.ru.md](README_RU.md)
+🇷🇺 Русская версия: [README_RU.md](README_RU.md)
 
 ---
 

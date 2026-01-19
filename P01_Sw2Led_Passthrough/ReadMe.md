@@ -22,3 +22,6 @@ LED <= SW
 ## Задания на модификацию
 - Переставить соответствие: SW0 -> LED6, SW1 -> LED0 и т.д.
 - Сделать инверсию: LED <= not SW
+
+[![Видео #9](https://img.youtube.com/vi/SnHonhdoE6I/maxresdefault.jpg)](https://youtu.be/SnHonhdoE6I)
+

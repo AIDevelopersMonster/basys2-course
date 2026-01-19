@@ -88,3 +88,7 @@
 ### Linux/macOS
 ```bash
 python2 create-new-project.py "P02_Guess_the_Logic"
+
+Видео
+
+[![Видео #10](https://img.youtube.com/vi/gPvqFEln-JE/maxresdefault.jpg)](https://youtu.be/gPvqFEln-JE)

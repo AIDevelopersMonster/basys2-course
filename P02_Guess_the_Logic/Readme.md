@@ -4,7 +4,7 @@
 В этом выпуске делаем классическое упражнение “Guess the Logic”:  
 по таблицам истинности описываем логические функции и реализуем их на FPGA-плате **Digilent Basys 2 (Spartan-3E)** в **VHDL**.
 
-🎬 Видео (#10): https://youtu.be/SnHonhdoE6I  
+🎬 Видео (#10): https://youtu.be/gPvqFEln-JEI  
 📘 Digilent (оригинальный проект “Guess the Logic”): https://digilent.com/reference/learn/courses/digital-projects/simple-logic-circuit/start
 
 ---
@@ -88,7 +88,7 @@
 ### Linux/macOS
 ```bash
 python2 create-new-project.py "P02_Guess_the_Logic"
-
+```
 Видео
 
 [![Видео #10](https://img.youtube.com/vi/gPvqFEln-JE/maxresdefault.jpg)](https://youtu.be/gPvqFEln-JE)

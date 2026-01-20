@@ -309,4 +309,4 @@ end sim;
 3. Прошейте `.bit` на плату и проверьте:
    - включите любые **три** из `SW0..SW4` → `LED0` должен загореться.
 
-[![Видео #10](https://img.youtube.com/vi/1-H2UTb4x4U/maxresdefault.jpg)](https://youtu.be/1-H2UTb4x4U)
+[![Видео #11](https://img.youtube.com/vi/1-H2UTb4x4U/maxresdefault.jpg)](https://youtu.be/1-H2UTb4x4U)

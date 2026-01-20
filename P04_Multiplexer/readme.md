@@ -96,4 +96,4 @@ python create-new-project.py "P04_Multiplexer"
 
 ```
 
-[![Видео #10](https://img.youtube.com/vi/1-H2UTb4x4U/maxresdefault.jpg)](https://youtu.be/1-H2UTb4x4U)
+[![Видео #10](https://img.youtube.com/vi/1tQiHq0aJQo/maxresdefault.jpg)](https://youtu.be/1tQiHq0aJQo)

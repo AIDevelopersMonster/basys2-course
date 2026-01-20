@@ -8,6 +8,8 @@
 - отдельный **testbench** с полным перебором входов,
 - простая индикация на светодиодах.
 
+🎬 Видео (#12): https://youtu.be/1tQiHq0aJQo
+
 ---
 
 ## Теория (коротко)
@@ -93,3 +95,5 @@ Y = \overline{S1}\,\overline{S0}\,D0 \;+\; \overline{S1}\,S0\,D1 \;+\; S1\,\over
 python create-new-project.py "P04_Multiplexer"
 
 ```
+
+[![Видео #10](https://img.youtube.com/vi/1-H2UTb4x4U/maxresdefault.jpg)](https://youtu.be/1-H2UTb4x4U)

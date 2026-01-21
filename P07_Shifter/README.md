@@ -8,6 +8,7 @@
 - Barrel shifter - комбинаторика (сразу реагирует на входы)
 - Shift register - последовательностная логика (нужен CLK, часто RESET/LOAD)
 
+🎬 Видео (#15): https://youtu.be/eDULKSWUpSE
 ---
 
 ## Теория
@@ -126,3 +127,6 @@
 - P07_Shifter.vhd - top (синтезируемый)
 - tb_P07_Shifter.vhd - testbench
 - *.ucf - ограничения под Basys2 (SW/LED)
+
+
+[![Видео #14](https://img.youtube.com/vi/eDULKSWUpSE/maxresdefault.jpg)](https://youtu.be/eDULKSWUpSE)

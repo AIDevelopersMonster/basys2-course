@@ -129,4 +129,4 @@
 - *.ucf - ограничения под Basys2 (SW/LED)
 
 
-[![Видео #14](https://img.youtube.com/vi/eDULKSWUpSE/maxresdefault.jpg)](https://youtu.be/eDULKSWUpSE)
+[![Видео #15](https://img.youtube.com/vi/eDULKSWUpSE/maxresdefault.jpg)](https://youtu.be/eDULKSWUpSE)

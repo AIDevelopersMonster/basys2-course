@@ -9,6 +9,8 @@
 - `sdata = I(sel)`
 - ровно один выход активен: `Y(sel)=sdata`, остальные `0`.
 
+🎬 Видео (#16): https://youtu.be/z02vKEP8Xfc
+
 ---
 
 ## Подключение (SW/LED)
@@ -62,3 +64,5 @@
 - `demux_1to4.vhd` - подмодуль DeMUX
 - `P08_Hierarchical_Comms_System.vhd` - top (wrapper, структурная схема)
 - `tb_P08_Hierarchical_Comms_System.vhd` - testbench (64 вектора + assert)
+
+[![Видео #16](https://img.youtube.com/vi/z02vKEP8Xfc/maxresdefault.jpg)](https://youtu.be/z02vKEP8Xfc)

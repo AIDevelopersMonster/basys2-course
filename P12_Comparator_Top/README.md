@@ -1,5 +1,8 @@
 # P12 - Magnitude Comparator (bit-slice), Basys2 (VHDL)
 
+🎬 Видео (#20): https://youtu.be/NTeeR7El0aE
+
+
 ## Теория (по Digilent)
 Magnitude comparator сравнивает два N-битных числа и формирует три выхода:
 GT (A>B), LT (A<B), EQ (A=B). Digilent отмечает, что компараторы легко описать поведенчески,
@@ -31,3 +34,5 @@ GT (A>B), LT (A<B), EQ (A=B). Digilent отмечает, что компарат
 ## Симуляция
 Simulation Sources → tb_P12_Comparator → Simulate Behavioral Model.
 Тестбенч перебирает все 256 комбинаций и делает assert-проверки.
+
+[![Видео #20](https://img.youtube.com/vi/NTeeR7El0aE/maxresdefault.jpg)](https://youtu.be/NTeeR7El0aE)

@@ -42,4 +42,4 @@ Digilent отдельно отмечает, что такие схемы - эт�
 На плате LED всё равно не покажет наносекундные эффекты, а combinational loops в FPGA требуют особой осторожности.
 
 
-[![Видео #16](https://img.youtube.com/vi/O77QcZTrcfM/maxresdefault.jpg)](https://youtu.be/O77QcZTrcfM)
+[![Видео #18](https://img.youtube.com/vi/O77QcZTrcfM/maxresdefault.jpg)](https://youtu.be/O77QcZTrcfM)

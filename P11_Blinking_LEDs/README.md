@@ -1,5 +1,7 @@
 # Project 11 - Blinking LEDs (Basys2, VHDL)
 
+🎬 Видео (#19): https://youtu.be/ZMLO5E4rI3E
+
 ## 
     :     "",  
 ****,         1-8 .
@@ -47,3 +49,6 @@
 - `NET "BTN<0>" ...`
 - `NET "SW<2:0>" ...`
   /.
+
+
+[![Видео #19](https://img.youtube.com/vi/ZMLO5E4rI3E/maxresdefault.jpg)](https://youtu.be/ZMLO5E4rI3E)

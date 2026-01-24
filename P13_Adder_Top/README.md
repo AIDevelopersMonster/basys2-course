@@ -7,6 +7,8 @@
 - арифметико-логическое устройство (ALU),
 - счётчики и процессорные блоки.
 
+🎬 Видео (#21): https://youtu.be/cQ8db-pU8ys
+
 ---
 
 ## 1. Теория
@@ -172,3 +174,5 @@ TB PASSED: Adder OK
 ## Автор и курс
 FPGA курс на базе платы **Basys2**  
 GitHub: https://github.com/AIDevelopersMonster/basys2-course
+
+[![Видео #21](https://img.youtube.com/vi/cQ8db-pU8ys/maxresdefault.jpg)](https://youtu.be/cQ8db-pU8ys)

@@ -35,7 +35,7 @@ NET "SEG<3>" LOC = "N11"; # Bank = 2, Signal name = CD
 NET "SEG<4>" LOC = "P12"; # Bank = 2, Signal name = CE
 NET "SEG<5>" LOC = "L13"; # Bank = 1, Signal name = CF
 NET "SEG<6>" LOC = "M12"; # Bank = 1, Signal name = CG
-# NET "dp" LOC = "N13"; # Bank = 1, Signal name = DP
+NET "SEG<7>" LOC = "N13"; # Bank = 1, Signal name = DP
 
 NET "AN<3>" LOC = "K14"; # Bank = 1, Signal name = AN3
 NET "AN<2>" LOC = "M13"; # Bank = 1, Signal name = AN2

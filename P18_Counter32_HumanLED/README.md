@@ -84,4 +84,4 @@ f_n = \frac{f_{clk}}{2^{n+1}}
 
 Testbench полезен для понимания методики проверки регистров и управляющих сигналов.
 
-[![Видео #26](https://img.youtube.com/vi/WOB2ujp1g3oI/maxresdefault.jpg)](https://youtu.be/WOB2ujp1g3o)
+[![Видео #26](https://img.youtube.com/vi/WOB2ujp1g3o/maxresdefault.jpg)](https://youtu.be/WOB2ujp1g3o)

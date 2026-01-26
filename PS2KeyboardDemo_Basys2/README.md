@@ -1,4 +1,4 @@
----
+
 
 ## PS/2 Keyboard Demo (Basys 2)
 
@@ -77,6 +77,5 @@
 Если наблюдается именно такое поведение —
 **PS/2 приёмник и парсер работают корректно**.
 
----
 
 [![Видео #28](https://img.youtube.com/vi/3xHqnoNp2JU/maxresdefault.jpg)](https://youtu.be/3xHqnoNp2JU)
